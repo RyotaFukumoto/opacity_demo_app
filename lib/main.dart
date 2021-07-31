@@ -46,13 +46,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 100.0,
                 color: Colors.red,
               ),
-              Opacity(
-                opacity: 0.0,
-                child: Container(
-                  width: 100.0,
-                  height: 100.0,
-                  color: Colors.blue,
-                ),
+              Stack(
+                children: [
+                  const Positioned.fill(child: FlutterLogo(size: 75)),
+                  Opacity(
+                      opacity: 0.50,
+                      child:Container(
+                        width: 100.0,
+                        height: 100.0,
+                        color: Colors.blue,
+                      ))
+                ],
               ),
               Container(
                 width: 100.0,
